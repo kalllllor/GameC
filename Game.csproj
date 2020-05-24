@@ -124,6 +124,16 @@
     <Compile Include="Engine\Interactions\Built-In\IHymirStrategy.cs" />
     <Compile Include="Engine\Interactions\Built-In\SkillForgetInteraction.cs" />
     <Compile Include="Engine\Interactions\ConsoleInteraction.cs" />
+    <Compile Include="Engine\Interactions\created\barrackEncounter.cs" />
+    <Compile Include="Engine\Interactions\created\caveEncounter.cs" />
+    <Compile Include="Engine\Interactions\created\GoblinEncounter.cs" />
+    <Compile Include="Engine\Interactions\created\IMasterStrategy.cs" />
+    <Compile Include="Engine\Interactions\created\MasterOfMagicEncounter.cs" />
+    <Compile Include="Engine\Interactions\created\MasterOfStrengthEncounter.cs" />
+    <Compile Include="Engine\Interactions\created\NeutralMasterOfMagicStrategy.cs" />
+    <Compile Include="Engine\Interactions\created\NeutralMasterOfStrengthStrategy.cs" />
+    <Compile Include="Engine\Interactions\created\ReadyMasterOfMagicStrategy.cs" />
+    <Compile Include="Engine\Interactions\created\ReadyMasterOfStrengthStrategy.cs" />
     <Compile Include="Engine\Interactions\ImageInteraction.cs" />
     <Compile Include="Engine\Interactions\Interaction.cs" />
     <Compile Include="Engine\Interactions\InteractionFactories\GymirHymirFactory.cs" />
@@ -172,6 +182,7 @@
     <Compile Include="Engine\Items\Misc\SingleUseArmor.cs" />
     <Compile Include="Engine\Items\Misc\StylisedFlatIron.cs" />
     <Compile Include="Engine\Items\Rings\ArmorRing.cs" />
+    <Compile Include="Engine\Items\Rings\DestroyedRing.cs" />
     <Compile Include="Engine\Items\Rings\HealthRing.cs" />
     <Compile Include="Engine\Items\Rings\InfinityRings.cs" />
     <Compile Include="Engine\Items\Rings\MageRing.cs" />
@@ -606,5 +617,6 @@
   <ItemGroup>
     <Resource Include="Display\Assets\item0620.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

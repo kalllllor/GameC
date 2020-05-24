@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Game.Engine.Items.BasicArmor;
 using Game.Engine.Items.BasicRing;
+using Game.Engine.Items.Rings;
 
 namespace Game.Engine.Items.ItemFactories
 {
@@ -15,6 +16,7 @@ namespace Game.Engine.Items.ItemFactories
         {
             List<Item> basicRing = new List<Item>()
             {
+                new DestroyedRing(),
                 new HealthRing(),
                 new ArmorRing(),
                 new InfinityRings(),
