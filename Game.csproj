@@ -124,8 +124,8 @@
     <Compile Include="Engine\Interactions\Built-In\IHymirStrategy.cs" />
     <Compile Include="Engine\Interactions\Built-In\SkillForgetInteraction.cs" />
     <Compile Include="Engine\Interactions\ConsoleInteraction.cs" />
-    <Compile Include="Engine\Interactions\created\barrackEncounter.cs" />
-    <Compile Include="Engine\Interactions\created\caveEncounter.cs" />
+    <Compile Include="Engine\Interactions\created\BarrackEncounter.cs" />
+    <Compile Include="Engine\Interactions\created\CaveEncounter.cs" />
     <Compile Include="Engine\Interactions\created\GoblinEncounter.cs" />
     <Compile Include="Engine\Interactions\created\IMasterStrategy.cs" />
     <Compile Include="Engine\Interactions\created\MasterOfMagicEncounter.cs" />
@@ -136,6 +136,8 @@
     <Compile Include="Engine\Interactions\created\ReadyMasterOfStrengthStrategy.cs" />
     <Compile Include="Engine\Interactions\ImageInteraction.cs" />
     <Compile Include="Engine\Interactions\Interaction.cs" />
+    <Compile Include="Engine\Interactions\InteractionFactories\BarrackFactory.cs" />
+    <Compile Include="Engine\Interactions\InteractionFactories\CaveFactory.cs" />
     <Compile Include="Engine\Interactions\InteractionFactories\GymirHymirFactory.cs" />
     <Compile Include="Engine\Interactions\InteractionFactories\InteractionFactory.cs" />
     <Compile Include="Engine\Interactions\Built-In\ShopInteraction.cs" />
@@ -617,6 +619,20 @@
   <ItemGroup>
     <Resource Include="Display\Assets\item0620.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Display\Assets\interaction0005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Display\Assets\interaction0006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Display\Assets\interaction0007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Display\Assets\interaction0008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Display\Assets\interaction0009.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

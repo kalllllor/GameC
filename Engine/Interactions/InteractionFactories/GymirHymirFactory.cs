@@ -11,7 +11,6 @@ namespace Game.Engine.Interactions.InteractionFactories
     {
         public List<Interaction> CreateInteractionsGroup(GameSession parentSession)
         {
-            // Gymir and Hymir must always appear together in the game world
             HymirEncounter hymir = new HymirEncounter(parentSession);
             GymirEncounter gymir = new GymirEncounter(parentSession, hymir);
             return new List<Interaction>() { hymir, gymir };

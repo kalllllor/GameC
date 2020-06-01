@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Game.Engine.Interactions.created
 {
-    class barrackEncounter : ListBoxInteraction
+    class BarrackEncounter : ListBoxInteraction
     {
         private MasterOfMagicEncounter magicMaster;
         private MasterOfStrengthEncounter strengthMaster;
@@ -15,7 +15,7 @@ namespace Game.Engine.Interactions.created
         private bool visited = false;
         private int magicTraning,staminaTraining,strengthTraining,armorTraining = 50;
 
-        public barrackEncounter(GameSession ses,MasterOfMagicEncounter magicMaster,MasterOfStrengthEncounter strengthMaster) : base(ses)
+        public BarrackEncounter(GameSession ses,MasterOfMagicEncounter magicMaster,MasterOfStrengthEncounter strengthMaster) : base(ses)
         {
             Name = "interaction0007";
             this.magicMaster = magicMaster;
@@ -43,7 +43,7 @@ namespace Game.Engine.Interactions.created
                 {
                     if(typeOfWarrior == "magician")
                     {
-                        int choice = GetListBoxChoice(new List<string>() { "Magic Power ("+ magicTraning +" gold per training)", "Stamina!  ("+ staminaTraining +" gold per training)" });
+                        int choice = GetListBoxChoice(new List<string>() { "\nMagic Power (" + magicTraning +" gold per training)", "\nStamina!  (" + staminaTraining +" gold per training)" });
                         if (choice == 0)
                         {
                             if (parentSession.currentPlayer.Gold > magicTraning)
@@ -51,6 +51,7 @@ namespace Game.Engine.Interactions.created
                                 parentSession.UpdateStat(8, -magicTraning);
                                 parentSession.UpdateStat(5, 10);
                                 magicTraning += 50;
+                                parentSession.SendText("You have trained magic! (+10 magic, cost 50 gold");
                             }
                             else
                             {
@@ -66,6 +67,7 @@ namespace Game.Engine.Interactions.created
                                 parentSession.UpdateStat(8, -staminaTraining);
                                 parentSession.UpdateStat(6, 10);
                                 staminaTraining += 20;
+                                parentSession.SendText("You have trained stamina! (+10 magic, cost 20 gold");
                             }
                             else
                             {
@@ -76,7 +78,7 @@ namespace Game.Engine.Interactions.created
                     }
                     else
                     {
-                        int choice2 = GetListBoxChoice(new List<string>() { "Strength (" + strengthTraining + " gold per training)", "Armor!  (" + armorTraining + " gold per training)" });
+                        int choice2 = GetListBoxChoice(new List<string>() { "\nStrength (" + strengthTraining + " gold per training)", "\nArmor!  (" + armorTraining + " gold per training)" });
                         if (choice2 == 0)
                         {
                             if (parentSession.currentPlayer.Gold > strengthTraining)
@@ -84,6 +86,7 @@ namespace Game.Engine.Interactions.created
                                 parentSession.UpdateStat(8, -strengthTraining);
                                 parentSession.UpdateStat(2, 10);
                                 strengthTraining += 50;
+                                parentSession.SendText("You have trained strength! (+10 strength, cost 50 gold");
                             }
                             else
                             {
@@ -99,6 +102,7 @@ namespace Game.Engine.Interactions.created
                                 parentSession.UpdateStat(8, -armorTraining);
                                 parentSession.UpdateStat(3, 10);
                                 staminaTraining += 20;
+                                parentSession.SendText("You have trained stamina! (+10 stamina, cost 20 gold");
                             }
                             else
                             {

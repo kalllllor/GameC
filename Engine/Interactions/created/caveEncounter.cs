@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Game.Engine.Interactions.created
 {
-    class caveEncounter : ListBoxInteraction
+    class CaveEncounter : ListBoxInteraction
     {
         int preparation = 0;
         int littleFound = 10;
@@ -14,7 +14,7 @@ namespace Game.Engine.Interactions.created
         int bigFound = 100;
         bool visited = false;
 
-        public caveEncounter(GameSession ses) : base (ses)
+        public CaveEncounter(GameSession ses) : base (ses)
         {
             Name = "interaction0006";
         }
